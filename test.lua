@@ -1,4 +1,4 @@
-local haml      = require 'haml'
+local haml      = require './haml'
 local json      = require 'json' or
                   require'dkjson' or
                   error('not found any json module')
@@ -31,6 +31,11 @@ local json      = require 'json' or
   should add tests for this in your implementation's test rather than here.
 * optional: whether or not the test is optional
 --]]
+
+local arg = process.argv
+arg[0] = arg[1]
+table.remove(arg,1)
+
 local path = arg[1] and arg[1] or 'spec/tests.json'
 local abort = arg[2]
 

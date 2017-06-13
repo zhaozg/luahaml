@@ -1,7 +1,18 @@
-local parser = require "haml.parser"
-local render = require "haml.render"
-local compile = require "haml.compile"
-local util = require "haml.util"
+  --[[lit-meta
+    name = "zhaozg/haml"
+    version = "0.3.8"
+    dependencies = {}
+    description = "haml module for weblit/luvit"
+    tags = { "haml", "weblit", "luvit" }
+    license = "MIT"
+    author = { name = "George Zhao", email = "zhaozg@gmail.com" }
+    homepage = "https://github.com/zhaozg/haml"
+  ]]
+
+local parser = require "./parser"
+local render = require "./render"
+local compile = require "./compile"
+local util = require "./util"
 
 local select = select
 local type = type

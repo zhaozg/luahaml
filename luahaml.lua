@@ -1,5 +1,5 @@
 #!/usr/bin/env lua
-local haml = require "haml"
+local haml = require "./haml"
 local VERSION = "0.2.0"
 
 local banner = "LuaHaml %s, copyright Norman Clarke <norman@njclarke.com> 2009-2012"
@@ -35,6 +35,10 @@ Examples:
 ]]
 
 local haml_options = {format = "xhtml"}
+
+local arg = process.argv
+arg[0] = arg[1]
+table.remove(arg,1)
 
 local function read_file()
   local file = arg[#arg]

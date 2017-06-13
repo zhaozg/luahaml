@@ -11,7 +11,7 @@ local concat = table.concat
 local format = string.format
 local gsub = string.gsub
 
-local filter = require 'haml.filter'
+local filter = require './filter'
 
 --- Merge two or more tables together.
 -- Duplicate keys cause the value to be added as a table containing all the
